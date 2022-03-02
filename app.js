@@ -4,23 +4,29 @@ var outputDev = document.querySelector("#output-area");
 
 var serverURL = "https://api.funtranslations.com/translate/minion.json"
 
-function errorHandler(error) {
+// var serverURL = "https://api.funtranslations.com/translate/sith.json"
+
+
+
+function errorHandler(error)
+{
     if (
         error ==
         "TypeError: Cannot read properties of undefined (reading 'translated')"
-    ) {
+      ) {
         alert("Please wait for an hour and try later!");
-    } else {
-        alert("Error : " + error);
+      } else {
+        alert("Error: " + error);
+      }
     }
-}
+
 
 function getserverURL(text) {
-   
+
 
     return serverURL + "?" + "text=" + text;
 
-    }
+}
 
 
 
@@ -32,10 +38,10 @@ function clickHandler() {
         .then(json => {
             var translatedText = json.contents.translated;
             outputDev.innerText = translatedText;
-
+            
         })
 
-        .catch(errorHandler)
+.catch(errorHandler);
 }
 
 
