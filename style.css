@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: hsl(191, 9%, 37%);
+    background-color: hsl(0, 0%, 100%);
 }
 
 textarea {
@@ -18,7 +18,7 @@ textarea {
     outline-style: none;
     width: 60%;
     height: 10vh;
-border: cornsilk;
+border: solid black;
     padding: 1rem;
     display: block;
     border-radius: 2rem 2rem;
@@ -34,13 +34,14 @@ border: cornsilk;
     display: block;
     outline-style: none;
     margin-bottom: 2rem;
-    background-color:rgb(255, 255, 255) ;
+    background-color:rgb(189, 185, 185) ;
     border-radius: 1rem 1rem;
 }
 
 h1 {
     text-align: center;
     padding: 1rem;
+    font-weight: 600;
 }
 
 #btn-translate{
@@ -70,10 +71,10 @@ text-decoration-style: solid;
 }
 
 .footer{
-    background-color: aquamarine;
+   
     text-align: center;
     display: block;
-    margin-top: 16rem;
+   
     padding: 8rem 4rem;
     border-top-right-radius: 2rem;
     font-weight: 600;
