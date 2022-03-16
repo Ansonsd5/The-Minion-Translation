@@ -8,23 +8,23 @@ var serverURL = "https://api.funtranslations.com/translate/minion.json"
 
 
 
-function errorHandler(error)
-{
-    if (
-        error ==
-        "TypeError: Cannot read properties of undefined (reading 'translated')"
-      ) {
-        alert("Please wait for an hour and try later!");
-      } else {
-        alert("Error: " + error);
-      }
-    }
+// function errorHandler(error)
+// {
+//     if (
+//         error ==
+//         "TypeError: Cannot read properties of undefined (reading 'translated')"
+//       ) {
+//         alert("Please wait for an hour and try later!");
+//       } else {
+//         alert("Error: " + error);
+//       }
+//     }
 
 
 function getserverURL(text) {
 
 
-    return serverURL + "?" + "text=" + text;
+  return serverURL + "?" + "text=" + text;
 
 }
 
@@ -32,16 +32,18 @@ function getserverURL(text) {
 
 
 function clickHandler() {
-    var textinput = inputText.value;
-    fetch(getserverURL(textinput))
-        .then(response => response.json())
-        .then(json => {
-            var translatedText = json.contents.translated;
-            outputDev.innerText = translatedText;
+    var userInput = inputText.value;
+ 
+    fetch(getserverURL(userInput))
+   console.log("url : ")
+        // .then(response => response.json())
+        // .then(json => {
+        //     var translatedText = json.contents.translated;
+        //     outputDev.innerText = translatedText;
             
-        })
+        // })
 
-.catch(errorHandler);
+// .catch(errorHandler);
 }
 
 
